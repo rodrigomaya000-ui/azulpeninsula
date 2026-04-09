@@ -1,6 +1,6 @@
 # Azul Península — Sitio Web
 
-Sitio web oficial del fraccionamiento residencial Azul Península.
+Sitio web oficial del fraccionamiento Azul Península.
 
 ## Estructura
 
@@ -33,10 +33,10 @@ azul-peninsula/
 
 ### Datos reales
 
-- [ ] Reemplazar "Nombre Apellido" con los miembros reales de la mesa directiva
-- [ ] Reemplazar "Nombre Apellido" con los miembros del consejo de vigilancia
-- [ ] Actualizar teléfono y correo en footer y contact.html
-- [ ] Actualizar dirección real en contact.html
+- [x] Reemplazar "Nombre Apellido" con los miembros reales de la mesa directiva
+- [x] Reemplazar "Nombre Apellido" con los miembros del consejo de vigilancia
+- [x] Actualizar teléfono y correo en footer y contact.html
+- [x] Actualizar dirección real en contact.html
 
 ### Imágenes
 
@@ -51,16 +51,16 @@ azul-peninsula/
 
 ### WhatsApp
 
-- [ ] Reemplazar `5232203500530` en contact.html con el número real
+- [x] Reemplazar `52XXXXXXXXXX` en contact.html con el número real
 
 ### Mapa
 
-- [ ] Ir a Google Maps → Compartir → Insertar mapa → copiar el iframe
-- [ ] Reemplazar el `<div class="map-placeholder">` en contact.html
+- [x] Ir a Google Maps → Compartir → Insertar mapa → copiar el iframe
+- [x] Reemplazar el `<div class="map-placeholder">` en contact.html
 
 ### Departamentos
 
-- [ ] Duplicar las tarjetas en listings.html para agregar los 16+ departamentos
+- [ ] Duplicar las tarjetas en listings.html para agregar departamentos
 - [ ] Actualizar precios, m², pisos y amenidades de cada uno
 
 ## Funcionalidades incluidas
