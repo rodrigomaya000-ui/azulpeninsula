@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Logo RM - Favicon (SVG escalable, sin pérdida de calidad) -->
+  <!-- Usar como favicon.svg en <link rel="icon" type="image/svg+xml" href="favicon.svg"> -->
+  <rect x="1" y="1" width="30" height="30" rx="12" fill="white" stroke="#111111" stroke-width="1.5"/>
+  <text x="16" y="22"
+    text-anchor="middle"
+    dominant-baseline="auto"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13"
+    fill="#111111"
+    font-weight="700"
+    letter-spacing="0.5">RM</text>
+</svg>
