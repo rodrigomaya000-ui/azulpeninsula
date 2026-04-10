@@ -82,6 +82,20 @@
         top: 50%;
       }
 
+      .org-box--link {
+        cursor: pointer;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .org-box--link:hover {
+        background: var(--azul-accent);
+        border-color: var(--azul-accent);
+        color: var(--white);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow-sm);
+      }
+
       /* ── Team grid ── */
       .team-section {
         padding: 4rem 0;
@@ -161,11 +175,11 @@
         margin-top: 2.5rem;
       }
 
-      /* El séptimo valor centrado solo */
+      /* El séptimo valor centrado solo 
       .value-item:last-child:nth-child(4n + 3) {
         grid-column: 2 / 4;
       }
-
+*/
       .value-item {
         text-align: center;
         color: var(--white);
@@ -291,20 +305,26 @@
           <div class="org-connector"></div>
           <!-- Nivel 2 -->
           <div class="org-level" style="gap: 4rem">
-            <div class="org-box">Mesa Directiva</div>
-            <div class="org-box">Consejo de Vigilancia</div>
+            <a href="#directors" class="org-box org-box--link"
+              >Mesa Directiva</a
+            >
+            <a href="#council" class="org-box org-box--link"
+              >Consejo de Vigilancia</a
+            >
           </div>
           <div class="org-connector"></div>
           <!-- Nivel 3 -->
           <div class="org-level">
-            <div class="org-box">Administración General</div>
+            <a href="#management" class="org-box org-box--link"
+              >Administración General</a
+            >
           </div>
         </div>
       </div>
     </section>
 
     <!-- ══ MESA DIRECTIVA ══ -->
-    <section class="team-section fade-in">
+    <section class="team-section fade-in" id="directors">
       <div class="container">
         <span class="section-label" data-i18n="about.mesa.label"
           >Mesa Directiva</span
@@ -330,7 +350,7 @@
           <div class="member-card">
             <div class="member-photo">LC</div>
             <div class="member-info">
-              <h4>Lic. Lizeth Castellón</h4>
+              <h4>Lic. Maritza Castellón</h4>
               <p class="member-role">Secretaria</p>
             </div>
           </div>
@@ -339,7 +359,7 @@
     </section>
 
     <!-- ══ CONSEJO DE VIGILANCIA ══ -->
-    <section class="team-section fade-in">
+    <section class="team-section fade-in" id="council">
       <div class="container">
         <span class="section-label" data-i18n="about.vigilancia.label"
           >Consejo de Vigilancia</span
@@ -395,10 +415,12 @@
     </section>
 
     <!-- ══ EQUIPO OPERATIVO ══ -->
-    <section class="team-section fade-in">
+    <section class="team-section fade-in" id="management">
       <div class="container">
-        <span class="section-label">Equipo Operativo</span>
-        <h2>Gestión y administración</h2>
+        <span class="section-label" data-i18n="about.operativo.label"
+          >Equipo Operativo</span
+        >
+        <h2 data-i18n="about.operativo.titulo">Gestión y administración</h2>
         <div class="section-divider"></div>
 
         <div class="team-grid">
@@ -412,7 +434,7 @@
           <div class="member-card">
             <div class="member-photo">LG</div>
             <div class="member-info">
-              <h4>Lic. Lizeth Gastelum</h4>
+              <h4>Lic. Lizett Gastelum</h4>
               <p class="member-role">Auxiliar de Administración</p>
             </div>
           </div>

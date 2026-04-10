@@ -54,6 +54,8 @@ const translations = {
     "about.mesa.titulo": "Quiénes nos representan",
     "about.vigilancia.label": "Consejo de Vigilancia",
     "about.vigilancia.titulo": "Supervisión y transparencia",
+    "about.operativo.label": "Equipo Operativo",
+    "about.operativo.titulo": "Gestión y administración",
 
     // listings.html
     "listings.hero.titulo": "Departamentos en Renta",
@@ -125,6 +127,8 @@ const translations = {
     "about.mesa.titulo": "Who represents us",
     "about.vigilancia.label": "Oversight Council",
     "about.vigilancia.titulo": "Supervision and transparency",
+    "about.operativo.label": "Operations Team",
+    "about.operativo.titulo": "Management and administration",
 
     // listings.html
     "listings.hero.titulo": "Apartments for Rent",
