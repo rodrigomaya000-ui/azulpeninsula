@@ -241,6 +241,27 @@ function initLangSwitch() {
   });
 }
 
+// ── Footer dinámico ───────────────────────
+function initFooter() {
+  const placeholder = document.getElementById("footer");
+  if (!placeholder) return;
+
+  // Detectar si estamos en raíz o en pages/
+  const isPages = location.pathname.includes("/pages/");
+  const src = isPages
+    ? "../components/footer-pages.html"
+    : "components/footer.html";
+
+  fetch(src)
+    .then((r) => r.text())
+    .then((html) => {
+      placeholder.outerHTML = html;
+      // Re-aplicar traducciones al footer recién inyectado
+      applyTranslations(currentLang);
+    })
+    .catch(() => console.warn("Footer no encontrado:", src));
+}
+
 // ── Animación de entrada ──────────────────
 function initFadeIn() {
   const observer = new IntersectionObserver(
@@ -263,6 +284,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initHamburger();
   initLangSwitch();
+  initFooter();
   initFadeIn();
   applyTranslations(currentLang);
 });
