@@ -46,8 +46,8 @@ azul-peninsula/
 
 ### Formulario
 
-- [ ] Crear cuenta en [Formspree.io](https://formspree.io) (gratis)
-- [ ] Reemplazar `YOUR_FORM_ID` en contact.html con tu ID real
+- [x] Crear cuenta en [Formspree.io](https://formspree.io) (gratis)
+- [x] Reemplazar `YOUR_FORM_ID` en contact.html con tu ID real
 
 ### WhatsApp
 

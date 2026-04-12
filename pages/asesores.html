@@ -10,9 +10,14 @@
       .fade-in {
         opacity: 0;
         transform: translateY(24px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
       }
-      .fade-in.visible { opacity: 1; transform: none; }
+      .fade-in.visible {
+        opacity: 1;
+        transform: none;
+      }
 
       /* ── Grid de asesores ── */
       .asesores-grid {
@@ -40,7 +45,11 @@
 
       .asesor-photo {
         aspect-ratio: 1/1;
-        background: linear-gradient(135deg, var(--azul-mid), var(--azul-accent));
+        background: linear-gradient(
+          135deg,
+          var(--azul-mid),
+          var(--azul-accent)
+        );
         display: flex;
         align-items: center;
         justify-content: center;
@@ -85,7 +94,9 @@
         transition: color 0.15s;
       }
 
-      .star.filled { color: #f59e0b; }
+      .star.filled {
+        color: #f59e0b;
+      }
 
       .rating-count {
         font-size: 0.78rem;
@@ -108,10 +119,13 @@
         transition: color var(--transition);
       }
 
-      .asesor-contact a:hover { color: var(--azul-accent); }
+      .asesor-contact a:hover {
+        color: var(--azul-accent);
+      }
 
       .asesor-contact svg {
-        width: 14px; height: 14px;
+        width: 14px;
+        height: 14px;
         flex-shrink: 0;
         color: var(--azul-light);
       }
@@ -123,7 +137,7 @@
         gap: 0.6rem;
         margin-top: auto;
         padding-top: 1rem;
-        border-top: 1px solid rgba(0,0,0,0.06);
+        border-top: 1px solid rgba(0, 0, 0, 0.06);
       }
 
       .btn-asesor {
@@ -175,7 +189,9 @@
         padding: 1rem;
       }
 
-      .modal-overlay.open { display: flex; }
+      .modal-overlay.open {
+        display: flex;
+      }
 
       .modal {
         background: var(--white);
@@ -189,13 +205,20 @@
       }
 
       @keyframes modalIn {
-        from { opacity: 0; transform: translateY(20px) scale(0.97); }
-        to   { opacity: 1; transform: none; }
+        from {
+          opacity: 0;
+          transform: translateY(20px) scale(0.97);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
       }
 
       .modal-close {
         position: absolute;
-        top: 1rem; right: 1rem;
+        top: 1rem;
+        right: 1rem;
         background: none;
         border: none;
         cursor: pointer;
@@ -205,7 +228,9 @@
         transition: color var(--transition);
       }
 
-      .modal-close:hover { color: var(--text-dark); }
+      .modal-close:hover {
+        color: var(--text-dark);
+      }
 
       .modal h3 {
         font-family: var(--font-display);
@@ -238,19 +263,24 @@
         cursor: pointer;
         font-size: 2rem;
         color: #d1d5db;
-        transition: color 0.15s, transform 0.15s;
+        transition:
+          color 0.15s,
+          transform 0.15s;
         padding: 0;
         line-height: 1;
       }
 
       .star-btn:hover,
-      .star-btn.selected { color: #f59e0b; transform: scale(1.15); }
+      .star-btn.selected {
+        color: #f59e0b;
+        transform: scale(1.15);
+      }
 
       /* Campo de comentario */
       .modal textarea {
         width: 100%;
         padding: 0.75rem 1rem;
-        border: 1.5px solid rgba(0,0,0,0.1);
+        border: 1.5px solid rgba(0, 0, 0, 0.1);
         border-radius: var(--radius);
         font-family: var(--font-body);
         font-size: 0.9rem;
@@ -294,9 +324,18 @@
         margin-bottom: 0.3rem;
       }
 
-      .resena-stars { font-size: 0.8rem; }
-      .resena-fecha { font-size: 0.72rem; color: var(--text-light); margin-left: auto; }
-      .resena-texto { color: var(--text-mid); line-height: 1.5; }
+      .resena-stars {
+        font-size: 0.8rem;
+      }
+      .resena-fecha {
+        font-size: 0.72rem;
+        color: var(--text-light);
+        margin-left: auto;
+      }
+      .resena-texto {
+        color: var(--text-mid);
+        line-height: 1.5;
+      }
 
       .ver-resenas-btn {
         background: none;
@@ -317,7 +356,9 @@
         overflow-y: auto;
       }
 
-      .modal-resenas .resena-item { background: var(--sand-light); }
+      .modal-resenas .resena-item {
+        background: var(--sand-light);
+      }
 
       .empty-resenas {
         text-align: center;
@@ -328,16 +369,19 @@
 
       /* ── Responsive ── */
       @media (max-width: 900px) {
-        .asesores-grid { grid-template-columns: repeat(2, 1fr); }
+        .asesores-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
 
       @media (max-width: 580px) {
-        .asesores-grid { grid-template-columns: 1fr; }
+        .asesores-grid {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
   <body>
-
     <!-- ══ NAVBAR ══ -->
     <nav class="navbar scrolled">
       <div class="container">
@@ -350,14 +394,18 @@
         </a>
         <ul class="nav-links">
           <li><a href="../index.html" data-i18n="nav.inicio">Inicio</a></li>
-          <li><a href="about.html"    data-i18n="nav.nosotros">Nosotros</a></li>
-          <li><a href="listings.html" data-i18n="nav.departamentos">Departamentos</a></li>
-          <li><a href="contact.html"  data-i18n="nav.contacto">Contacto</a></li>
+          <li><a href="about.html" data-i18n="nav.nosotros">Nosotros</a></li>
+          <li>
+            <a href="listings.html" data-i18n="nav.departamentos"
+              >Departamentos</a
+            >
+          </li>
+          <li><a href="contact.html" data-i18n="nav.contacto">Contacto</a></li>
           <li><a href="asesores.html" data-i18n="nav.asesores">Asesores</a></li>
           <li>
             <div class="lang-switch">
               <button class="lang-btn active" data-lang="es">ES</button>
-              <button class="lang-btn"        data-lang="en">EN</button>
+              <button class="lang-btn" data-lang="en">EN</button>
             </div>
           </li>
         </ul>
@@ -373,7 +421,10 @@
         <div class="page-hero-content">
           <span class="section-label" data-i18n="asesores.label">Asesores</span>
           <h1 data-i18n="asesores.titulo">Nuestros Asesores</h1>
-          <p data-i18n="asesores.sub">Profesionales listos para ayudarte a encontrar tu departamento ideal.</p>
+          <p data-i18n="asesores.sub">
+            Profesionales listos para ayudarte a encontrar tu departamento
+            ideal.
+          </p>
         </div>
       </div>
     </section>
@@ -382,7 +433,6 @@
     <section class="fade-in">
       <div class="container">
         <div class="asesores-grid" id="asesores-grid">
-
           <!-- Asesor 1 -->
           <div class="asesor-card">
             <div class="asesor-photo">EP</div>
@@ -395,25 +445,58 @@
               </div>
 
               <div class="asesor-contact">
-                <a href="tel:+523221575210">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                <a
+                  href="https://wa.me/523221575210?text=Hola,%20me%20interesa%20conocer%20los%20departamentos%20disponibles%20en%20Azul%20Península."
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                    />
                   </svg>
                   (322) 157-5210
                 </a>
                 <a href="mailto:efrain1089@gmail.com">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                   efrain1089@gmail.com
                 </a>
               </div>
 
-              <button class="ver-resenas-btn" onclick="verResenas(0, 'Efrain Pineda Quintero')">Ver reseñas</button>
+              <button
+                class="ver-resenas-btn"
+                onclick="verResenas(0, 'Efrain Pineda Quintero')"
+              >
+                Ver reseñas
+              </button>
 
               <div class="asesor-actions">
-                <a href="contact.html?asesor=Efrain%20Pineda%20Quintero" class="btn-asesor btn-elegir" data-i18n="asesores.elegir">Elegir este asesor</a>
-                <button class="btn-asesor btn-resena" onclick="abrirModal(0, 'Efrain Pineda Quintero')" data-i18n="asesores.resena">Dejar reseña</button>
+                <a
+                  href="contact.html?asesor=Efrain%20Pineda%20Quintero"
+                  class="btn-asesor btn-elegir"
+                  data-i18n="asesores.elegir"
+                  >Elegir este asesor</a
+                >
+                <button
+                  class="btn-asesor btn-resena"
+                  onclick="abrirModal(0, 'Efrain Pineda Quintero')"
+                  data-i18n="asesores.resena"
+                >
+                  Dejar reseña
+                </button>
               </div>
             </div>
           </div>
@@ -430,25 +513,58 @@
               </div>
 
               <div class="asesor-contact">
-                <a href="tel:+525569855588">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                <a
+                  href="https://wa.me/525569855588?text=Hola,%20me%20interesa%20conocer%20los%20departamentos%20disponibles%20en%20Azul%20Península."
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                    />
                   </svg>
                   (55) 6985-5588
                 </a>
                 <a href="mailto:ingasafra@hotmail.com">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                   ingasafra@hotmail.com
                 </a>
               </div>
 
-              <button class="ver-resenas-btn" onclick="verResenas(1, 'Alhely Sánchez Montaño')">Ver reseñas</button>
+              <button
+                class="ver-resenas-btn"
+                onclick="verResenas(1, 'Alhely Sánchez Montaño')"
+              >
+                Ver reseñas
+              </button>
 
               <div class="asesor-actions">
-                <a href="contact.html?asesor=Alhely%20S%C3%A1nchez%20Monta%C3%B1o" class="btn-asesor btn-elegir" data-i18n="asesores.elegir">Elegir este asesor</a>
-                <button class="btn-asesor btn-resena" onclick="abrirModal(1, 'Alhely Sánchez Montaño')" data-i18n="asesores.resena">Dejar reseña</button>
+                <a
+                  href="contact.html?asesor=Alhely%20S%C3%A1nchez%20Monta%C3%B1o"
+                  class="btn-asesor btn-elegir"
+                  data-i18n="asesores.elegir"
+                  >Elegir este asesor</a
+                >
+                <button
+                  class="btn-asesor btn-resena"
+                  onclick="abrirModal(1, 'Alhely Sánchez Montaño')"
+                  data-i18n="asesores.resena"
+                >
+                  Dejar reseña
+                </button>
               </div>
             </div>
           </div>
@@ -465,29 +581,61 @@
               </div>
 
               <div class="asesor-contact">
-                <a href="tel:+523221802767">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                <a
+                  href="https://wa.me/523221802767?text=Hola,%20me%20interesa%20conocer%20los%20departamentos%20disponibles%20en%20Azul%20Península."
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.96a16 16 0 006.13 6.13l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"
+                    />
                   </svg>
                   (322) 180-2767
                 </a>
                 <a href="mailto:damarisfloresrobledo@gmail.com">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                   damarisfloresrobledo@gmail.com
                 </a>
               </div>
 
-              <button class="ver-resenas-btn" onclick="verResenas(2, 'Elizabeth Flores Robledo')">Ver reseñas</button>
+              <button
+                class="ver-resenas-btn"
+                onclick="verResenas(2, 'Elizabeth Flores Robledo')"
+              >
+                Ver reseñas
+              </button>
 
               <div class="asesor-actions">
-                <a href="contact.html?asesor=Elizabeth%20Flores%20Robledo" class="btn-asesor btn-elegir" data-i18n="asesores.elegir">Elegir este asesor</a>
-                <button class="btn-asesor btn-resena" onclick="abrirModal(2, 'Elizabeth Flores Robledo')" data-i18n="asesores.resena">Dejar reseña</button>
+                <a
+                  href="contact.html?asesor=Elizabeth%20Flores%20Robledo"
+                  class="btn-asesor btn-elegir"
+                  data-i18n="asesores.elegir"
+                  >Elegir este asesor</a
+                >
+                <button
+                  class="btn-asesor btn-resena"
+                  onclick="abrirModal(2, 'Elizabeth Flores Robledo')"
+                  data-i18n="asesores.resena"
+                >
+                  Dejar reseña
+                </button>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -507,11 +655,27 @@
           <button class="star-btn" data-val="5">★</button>
         </div>
 
-        <textarea id="modal-comentario" placeholder="Comparte tu experiencia con este asesor..." maxlength="300"></textarea>
+        <textarea
+          id="modal-comentario"
+          placeholder="Comparte tu experiencia con este asesor..."
+          maxlength="300"
+        ></textarea>
 
         <div class="modal-actions">
-          <button class="btn btn-outline" onclick="cerrarModal()" data-i18n="asesores.modal.cancelar">Cancelar</button>
-          <button class="btn btn-primary" onclick="guardarResena()" data-i18n="asesores.modal.guardar">Publicar reseña</button>
+          <button
+            class="btn btn-outline"
+            onclick="cerrarModal()"
+            data-i18n="asesores.modal.cancelar"
+          >
+            Cancelar
+          </button>
+          <button
+            class="btn btn-primary"
+            onclick="guardarResena()"
+            data-i18n="asesores.modal.guardar"
+          >
+            Publicar reseña
+          </button>
         </div>
       </div>
     </div>
@@ -532,13 +696,13 @@
     <script src="../js/main.js"></script>
     <script>
       // ── Datos de asesores ─────────────────
-      const ASESORES_KEY = 'ap_resenas';
+      const ASESORES_KEY = "ap_resenas";
       let asesorActivo = null;
       let estrellaSeleccionada = 0;
 
       // ── Cargar reseñas del localStorage ──
       function getResenas() {
-        return JSON.parse(localStorage.getItem(ASESORES_KEY) || '{}');
+        return JSON.parse(localStorage.getItem(ASESORES_KEY) || "{}");
       }
 
       function saveResenas(data) {
@@ -549,11 +713,11 @@
       function renderStars(containerId, promedio) {
         const el = document.getElementById(containerId);
         if (!el) return;
-        el.innerHTML = '';
+        el.innerHTML = "";
         for (let i = 1; i <= 5; i++) {
-          const s = document.createElement('span');
-          s.className = 'star' + (i <= Math.round(promedio) ? ' filled' : '');
-          s.textContent = '★';
+          const s = document.createElement("span");
+          s.className = "star" + (i <= Math.round(promedio) ? " filled" : "");
+          s.textContent = "★";
           el.appendChild(s);
         }
       }
@@ -563,14 +727,17 @@
         const resenas = getResenas();
         for (let i = 0; i < 3; i++) {
           const lista = resenas[i] || [];
-          const countEl = document.getElementById('count-' + i);
+          const countEl = document.getElementById("count-" + i);
           if (lista.length === 0) {
-            renderStars('stars-' + i, 0);
-            if (countEl) countEl.textContent = 'Sin reseñas';
+            renderStars("stars-" + i, 0);
+            if (countEl) countEl.textContent = "Sin reseñas";
           } else {
-            const promedio = lista.reduce((a, r) => a + r.estrellas, 0) / lista.length;
-            renderStars('stars-' + i, promedio);
-            if (countEl) countEl.textContent = promedio.toFixed(1) + ' (' + lista.length + ')';
+            const promedio =
+              lista.reduce((a, r) => a + r.estrellas, 0) / lista.length;
+            renderStars("stars-" + i, promedio);
+            if (countEl)
+              countEl.textContent =
+                promedio.toFixed(1) + " (" + lista.length + ")";
           }
         }
       }
@@ -579,24 +746,26 @@
       function abrirModal(idx, nombre) {
         asesorActivo = idx;
         estrellaSeleccionada = 0;
-        document.getElementById('modal-nombre').textContent = nombre;
-        document.getElementById('modal-comentario').value = '';
+        document.getElementById("modal-nombre").textContent = nombre;
+        document.getElementById("modal-comentario").value = "";
         // Reset estrellas
-        document.querySelectorAll('.star-btn').forEach(b => b.classList.remove('selected'));
-        document.getElementById('modal-resena').classList.add('open');
+        document
+          .querySelectorAll(".star-btn")
+          .forEach((b) => b.classList.remove("selected"));
+        document.getElementById("modal-resena").classList.add("open");
       }
 
       function cerrarModal() {
-        document.getElementById('modal-resena').classList.remove('open');
+        document.getElementById("modal-resena").classList.remove("open");
         asesorActivo = null;
       }
 
       // ── Selector de estrellas interactivo ─
-      document.querySelectorAll('.star-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+      document.querySelectorAll(".star-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
           estrellaSeleccionada = parseInt(btn.dataset.val);
-          document.querySelectorAll('.star-btn').forEach((b, i) => {
-            b.classList.toggle('selected', i < estrellaSeleccionada);
+          document.querySelectorAll(".star-btn").forEach((b, i) => {
+            b.classList.toggle("selected", i < estrellaSeleccionada);
           });
         });
       });
@@ -604,17 +773,23 @@
       // ── Guardar reseña ────────────────────
       function guardarResena() {
         if (estrellaSeleccionada === 0) {
-          alert('Por favor selecciona una calificación.');
+          alert("Por favor selecciona una calificación.");
           return;
         }
-        const comentario = document.getElementById('modal-comentario').value.trim();
+        const comentario = document
+          .getElementById("modal-comentario")
+          .value.trim();
         const resenas = getResenas();
         if (!resenas[asesorActivo]) resenas[asesorActivo] = [];
 
         resenas[asesorActivo].push({
           estrellas: estrellaSeleccionada,
           comentario: comentario,
-          fecha: new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'short', day: 'numeric' })
+          fecha: new Date().toLocaleDateString("es-MX", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          }),
         });
 
         saveResenas(resenas);
@@ -627,41 +802,48 @@
         const resenas = getResenas();
         const lista = resenas[idx] || [];
 
-        document.getElementById('ver-resenas-nombre').textContent = nombre;
-        const contenedor = document.getElementById('ver-resenas-lista');
+        document.getElementById("ver-resenas-nombre").textContent = nombre;
+        const contenedor = document.getElementById("ver-resenas-lista");
 
         if (lista.length === 0) {
-          contenedor.innerHTML = '<div class="empty-resenas">Aún no hay reseñas para este asesor.<br>¡Sé el primero en dejar una!</div>';
+          contenedor.innerHTML =
+            '<div class="empty-resenas">Aún no hay reseñas para este asesor.<br>¡Sé el primero en dejar una!</div>';
         } else {
-          contenedor.innerHTML = lista.slice().reverse().map(r => `
+          contenedor.innerHTML = lista
+            .slice()
+            .reverse()
+            .map(
+              (r) => `
             <div class="resena-item">
               <div class="resena-header">
-                <span class="resena-stars">${'★'.repeat(r.estrellas)}${'☆'.repeat(5 - r.estrellas)}</span>
+                <span class="resena-stars">${"★".repeat(r.estrellas)}${"☆".repeat(5 - r.estrellas)}</span>
                 <span class="resena-fecha">${r.fecha}</span>
               </div>
-              ${r.comentario ? `<p class="resena-texto">${r.comentario}</p>` : ''}
+              ${r.comentario ? `<p class="resena-texto">${r.comentario}</p>` : ""}
             </div>
-          `).join('');
+          `,
+            )
+            .join("");
         }
 
-        document.getElementById('modal-ver-resenas').classList.add('open');
+        document.getElementById("modal-ver-resenas").classList.add("open");
       }
 
       function cerrarVerResenas() {
-        document.getElementById('modal-ver-resenas').classList.remove('open');
+        document.getElementById("modal-ver-resenas").classList.remove("open");
       }
 
       // ── Cerrar modales con Escape ─────────
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') {
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
           cerrarModal();
           cerrarVerResenas();
         }
       });
 
       // ── Cerrar al hacer clic fuera ────────
-      document.querySelectorAll('.modal-overlay').forEach(overlay => {
-        overlay.addEventListener('click', e => {
+      document.querySelectorAll(".modal-overlay").forEach((overlay) => {
+        overlay.addEventListener("click", (e) => {
           if (e.target === overlay) {
             cerrarModal();
             cerrarVerResenas();

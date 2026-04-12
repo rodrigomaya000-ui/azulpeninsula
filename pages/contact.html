@@ -356,9 +356,7 @@
               <div class="info-icon">🕐</div>
               <div>
                 <h5>Horario de atención</h5>
-                <p>
-                  Martes a Viernes: 9:00 – 18:00<br />Sábados: 10:00 – 14:00
-                </p>
+                <p>Lunes a Viernes: 9:00 – 18:00<br />Sábados: 10:00 – 14:00</p>
               </div>
             </div>
 
@@ -452,9 +450,15 @@
                   <label for="asesor">Asesor preferido</label>
                   <select id="asesor" name="asesor">
                     <option value="">Sin preferencia</option>
-                    <option value="Efrain Pineda Quintero">Efrain Pineda Quintero</option>
-                    <option value="Alhely Sánchez Montaño">Alhely Sánchez Montaño</option>
-                    <option value="Elizabeth Flores Robledo">Elizabeth Flores Robledo</option>
+                    <option value="Efrain Pineda Quintero">
+                      Efrain Pineda Quintero
+                    </option>
+                    <option value="Alhely Sánchez Montaño">
+                      Alhely Sánchez Montaño
+                    </option>
+                    <option value="Elizabeth Flores Robledo">
+                      Elizabeth Flores Robledo
+                    </option>
                   </select>
                 </div>
 
@@ -510,60 +514,58 @@
 
     <script src="../js/main.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-
+      document.addEventListener("DOMContentLoaded", () => {
         // ── 1. Prellenar asesor desde URL (?asesor=Nombre) ──
-        const params     = new URLSearchParams(window.location.search);
-        const asesorParam = params.get('asesor');
+        const params = new URLSearchParams(window.location.search);
+        const asesorParam = params.get("asesor");
         if (asesorParam) {
-          const select = document.getElementById('asesor');
+          const select = document.getElementById("asesor");
           if (select) {
-            Array.from(select.options).forEach(opt => {
+            Array.from(select.options).forEach((opt) => {
               if (opt.value === asesorParam) opt.selected = true;
             });
           }
         }
 
         // ── 2. Correo protegido contra Cloudflare ──
-        const correoEl = document.getElementById('correo-admin');
+        const correoEl = document.getElementById("correo-admin");
         if (correoEl) {
-          const addr = 'direccion.azul' + '@' + 'outlook.com';
-          correoEl.href      = 'mailto:' + addr;
+          const addr = "direccion.azul" + "@" + "outlook.com";
+          correoEl.href = "mailto:" + addr;
           correoEl.textContent = addr;
         }
 
         // ── 3. Manejo del formulario (Formspree async) ──
-        const form    = document.getElementById('contact-form');
-        const success = document.getElementById('form-success');
+        const form = document.getElementById("contact-form");
+        const success = document.getElementById("form-success");
 
         if (form) {
-          form.addEventListener('submit', async (e) => {
+          form.addEventListener("submit", async (e) => {
             e.preventDefault();
             const btn = form.querySelector('[type="submit"]');
-            btn.textContent = '...';
+            btn.textContent = "...";
             btn.disabled = true;
 
             try {
               const res = await fetch(form.action, {
-                method: 'POST',
+                method: "POST",
                 body: new FormData(form),
-                headers: { Accept: 'application/json' },
+                headers: { Accept: "application/json" },
               });
 
               if (res.ok) {
-                form.style.display = 'none';
-                success.style.display = 'block';
+                form.style.display = "none";
+                success.style.display = "block";
               } else {
-                btn.textContent = 'Error — intenta de nuevo';
+                btn.textContent = "Error — intenta de nuevo";
                 btn.disabled = false;
               }
             } catch {
-              btn.textContent = 'Error de red — intenta de nuevo';
+              btn.textContent = "Error de red — intenta de nuevo";
               btn.disabled = false;
             }
           });
         }
-
       });
     </script>
   </body>
