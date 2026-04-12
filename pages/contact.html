@@ -288,6 +288,7 @@
             >
           </li>
           <li><a href="contact.html" data-i18n="nav.contacto">Contacto</a></li>
+          <li><a href="asesores.html" data-i18n="nav.asesores">Asesores</a></li>
           <li>
             <div class="lang-switch">
               <button class="lang-btn active" data-lang="es">ES</button>
@@ -346,9 +347,7 @@
               <div>
                 <h5>Correo</h5>
                 <p>
-                  <a href="mailto:info@azulpeninsula.mx"
-                    >direccion.azul@outlook.com</a
-                  >
+                  <a id="correo-admin"></a>
                 </p>
               </div>
             </div>
@@ -450,6 +449,16 @@
                 </div>
 
                 <div class="form-group full">
+                  <label for="asesor">Asesor preferido</label>
+                  <select id="asesor" name="asesor">
+                    <option value="">Sin preferencia</option>
+                    <option value="Efrain Pineda Quintero">Efrain Pineda Quintero</option>
+                    <option value="Alhely Sánchez Montaño">Alhely Sánchez Montaño</option>
+                    <option value="Elizabeth Flores Robledo">Elizabeth Flores Robledo</option>
+                  </select>
+                </div>
+
+                <div class="form-group full">
                   <label for="mensaje" data-i18n="contact.form.mensaje"
                     >Mensaje</label
                   >
@@ -501,37 +510,61 @@
 
     <script src="../js/main.js"></script>
     <script>
-      // ── Manejo del formulario (Formspree async) ──
-      const form = document.getElementById("contact-form");
-      const success = document.getElementById("form-success");
+      document.addEventListener('DOMContentLoaded', () => {
 
-      if (form) {
-        form.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const btn = form.querySelector('[type="submit"]');
-          btn.textContent = "...";
-          btn.disabled = true;
-
-          try {
-            const res = await fetch(form.action, {
-              method: "POST",
-              body: new FormData(form),
-              headers: { Accept: "application/json" },
+        // ── 1. Prellenar asesor desde URL (?asesor=Nombre) ──
+        const params     = new URLSearchParams(window.location.search);
+        const asesorParam = params.get('asesor');
+        if (asesorParam) {
+          const select = document.getElementById('asesor');
+          if (select) {
+            Array.from(select.options).forEach(opt => {
+              if (opt.value === asesorParam) opt.selected = true;
             });
+          }
+        }
 
-            if (res.ok) {
-              form.style.display = "none";
-              success.style.display = "block";
-            } else {
-              btn.textContent = "Error — intenta de nuevo";
+        // ── 2. Correo protegido contra Cloudflare ──
+        const correoEl = document.getElementById('correo-admin');
+        if (correoEl) {
+          const addr = 'direccion.azul' + '@' + 'outlook.com';
+          correoEl.href      = 'mailto:' + addr;
+          correoEl.textContent = addr;
+        }
+
+        // ── 3. Manejo del formulario (Formspree async) ──
+        const form    = document.getElementById('contact-form');
+        const success = document.getElementById('form-success');
+
+        if (form) {
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('[type="submit"]');
+            btn.textContent = '...';
+            btn.disabled = true;
+
+            try {
+              const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { Accept: 'application/json' },
+              });
+
+              if (res.ok) {
+                form.style.display = 'none';
+                success.style.display = 'block';
+              } else {
+                btn.textContent = 'Error — intenta de nuevo';
+                btn.disabled = false;
+              }
+            } catch {
+              btn.textContent = 'Error de red — intenta de nuevo';
               btn.disabled = false;
             }
-          } catch {
-            btn.textContent = "Error de red — intenta de nuevo";
-            btn.disabled = false;
-          }
-        });
-      }
+          });
+        }
+
+      });
     </script>
   </body>
 </html>

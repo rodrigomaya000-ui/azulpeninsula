@@ -66,6 +66,17 @@ const translations = {
     "listings.card.renta": "/ mes",
     "listings.card.cta": "Ver detalles",
 
+    // asesores.html
+    "nav.asesores": "Asesores",
+    "asesores.label": "Directorio",
+    "asesores.titulo": "Nuestros Asesores",
+    "asesores.sub": "Profesionales listos para ayudarte a encontrar tu departamento ideal.",
+    "asesores.elegir": "Elegir este asesor",
+    "asesores.resena": "Dejar reseña",
+    "asesores.modal.titulo": "Dejar reseña",
+    "asesores.modal.cancelar": "Cancelar",
+    "asesores.modal.guardar": "Publicar reseña",
+
     // contact.html
     "contact.hero.titulo": "Contacto",
     "contact.hero.sub": "Estamos para ayudarte. Agenda una cita o escríbenos.",
@@ -138,6 +149,17 @@ const translations = {
     "listings.filtro.rentado": "Rented",
     "listings.card.renta": "/ month",
     "listings.card.cta": "View details",
+
+    // asesores.html
+    "nav.asesores": "Agents",
+    "asesores.label": "Directory",
+    "asesores.titulo": "Our Agents",
+    "asesores.sub": "Professionals ready to help you find your ideal apartment.",
+    "asesores.elegir": "Choose this agent",
+    "asesores.resena": "Leave a review",
+    "asesores.modal.titulo": "Leave a review",
+    "asesores.modal.cancelar": "Cancel",
+    "asesores.modal.guardar": "Publish review",
 
     // contact.html
     "contact.hero.titulo": "Contact",
