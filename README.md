@@ -7,15 +7,20 @@ Sitio web oficial del fraccionamiento Azul Península.
 ```
 azul-peninsula/
 ├── index.html              ← Única página en raíz
+├── favicon.svg             ← Ícono del sitio
 ├── README.md
 ├── pages/                  ← Todas las páginas internas
 │   ├── about.html          ← Nosotros / Administración
 │   ├── listings.html       ← Catálogo de departamentos
-│   └── contact.html        ← Formulario y datos de contacto
+│   ├── contact.html        ← Formulario y datos de contacto
+│   └── asesores.html       ← Directorio de asesores y reseñas
+├── components/             ← Componentes reutilizables
+│   ├── footer.html         ← Footer para index.html (rutas raíz)
+│   └── footer-pages.html   ← Footer para pages/ (rutas con ../)
 ├── css/
 │   └── styles.css          ← Estilos globales
 ├── js/
-│   └── main.js             ← Navbar, idioma ES/EN, animaciones
+│   └── main.js             ← Navbar, idioma ES/EN, footer dinámico, animaciones
 └── img/                    ← Todas las imágenes
     ├── hero/               ← Foto principal del fraccionamiento
     ├── directiva/          ← Fotos de los miembros
